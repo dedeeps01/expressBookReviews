@@ -21,7 +21,7 @@ app.use("/customer/auth/*", function auth(req,res,next){
 
     try {
         // Verify the token
-        const decoded = jwt.verify(token, "your_secret_key"); // Replace "your_secret_key" with your actual secret key
+        const decoded = jwt.verify(token, 'my-secret-key'); // Replace "your_secret_key" with your actual secret key
 
         // Token is valid, proceed to the next middleware or route handler
         req.user = verified
